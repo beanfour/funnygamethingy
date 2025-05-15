@@ -8,8 +8,6 @@
 
 config_version=5
 
-/Youaredmeelyconfig_version=null
-
 [application]
 
 config/name="gamefiles"
