@@ -1,0 +1,19 @@
+using Godot;
+using System;
+
+public partial class buttontest : Button
+{
+	public override void _Ready()
+	{
+		var button = new Button();
+		button.Text = "PRESS MEEE!!!";
+		button.Pressed += ButtonPressed;
+		button.Size = new Vector2(150, 200); // Set button size to 150x200
+		AddChild(button);
+	}
+
+	private void ButtonPressed()
+	{
+		GD.Print("Hello world!");
+	}
+}

@@ -1,20 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bus83wjp735d8"]
+[gd_scene load_steps=3 format=3 uid="uid://bus83wjp735d8"]
 
 [ext_resource type="Script" uid="uid://byx8ks2d1fxs2" path="res://Playbutton.cs" id="1_wtcfe"]
+
+[sub_resource type="FontVariation" id="FontVariation_wtcfe"]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Button" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
 offset_left = 144.0
 offset_top = 56.0
 offset_right = 227.0
 offset_bottom = 96.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(1.21033, 1.18176)
+theme_override_fonts/font = SubResource("FontVariation_wtcfe")
 action_mode = 0
 text = "PRESS ME"
 flat = true
