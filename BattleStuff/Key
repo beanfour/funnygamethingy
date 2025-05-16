@@ -1,0 +1,38 @@
+public class FunnyPot{
+    private const String name = "Funny Potion";
+    private const String description = "To Be honest Im not even sure what this one does..."; 
+    private int number = 0;
+
+    public FunnyPot() {}  
+
+    public void addPots(int more) {
+        number += more;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public bool Use() {
+        if (number > 0) {
+            number--;
+
+            Random random = new Random();
+            Stats.UpdateStats(
+                random.Next(-5, 6), // Generates a random integer between -5 and 5 (inclusive)
+                random.Next(-5, 6),
+                random.Next(-5, 6),
+                random.Next(-5, 6)
+            );
+
+            return true;
+        } else {
+            return false;
+        }
+    }
+}
+
