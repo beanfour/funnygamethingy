@@ -8,7 +8,7 @@ public partial class buttontest : Button
 		var button = new Button();
 		button.Text = "PRESS MEEE!!!";
 		button.Pressed += ButtonPressed;
-		button.Size = new Vector2(150, 150); 
+		button.Size = new Vector2(50, 50); 
 		AddChild(button);
 	}
 
