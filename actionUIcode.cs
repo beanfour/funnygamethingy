@@ -1,19 +1,15 @@
 using Godot;
 using System;
 
-public partial class buttontest : Button
+public partial class actionUIcode : Node
 {
-	public override void _Ready()
-	{
-		var button = new Button();
+	var button = new Button();
 		button.Text = "PRESS MEEE!!!";
 		button.Pressed += ButtonPressed;
-		button.Size = new Vector2(50, 50); 
+		button.Size = new Vector2(150, 150); 
 		AddChild(button);
 	}
-
 	private void ButtonPressed()
 	{
 		GD.Print("Hello world!");
 	}
-}
