@@ -3,25 +3,18 @@ using System;
 
 public partial class Player : CharacterBody2D
 {
-	// Movement speed in pixels per second
-	[Export]
-	public int Speed = 100;
+       public int Speed { get; set; } = 400;
 
-	public override void movement(double delta)
-	{
-		Vector2 velocity = Vector2.Zero;
+    public void GetInput()
+    {
 
-		if (Input.IsActionPressed("ui_right"))
-			velocity.X += 1;
-		if (Input.IsActionPressed("ui_left"))
-			velocity.X -= 1;
-		if (Input.IsActionPressed("ui_down"))
-			velocity.Y += 1;
-		if (Input.IsActionPressed("ui_up"))
-			velocity.Y -= 1;
+        Vector2 inputDirection = Input.GetVector("left", "right", "up", "down");
+        Velocity = inputDirection * Speed;
+    }
 
-		velocity = velocity.Normalized() * Speed;
-		Velocity = velocity;
-		MoveAndSlide();
-	}
+    public override void _PhysicsProcess(double delta)
+    {
+        GetInput();
+        MoveAndSlide();
+    } 
 }
