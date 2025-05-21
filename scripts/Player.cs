@@ -3,15 +3,15 @@ using System;
 
 public partial class Player : CharacterBody2D
 {
-	[Export]
-	public int Speed = 200;
+    [Export]
+    public int Speed = 200;
 
-	private AnimatedSprite2D _anim;
+    private AnimatedSprite2D _anim;
 
-	public override void _Ready()
-	{
-		_anim = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
-	}
+    public override void _Ready()
+    {
+        _anim = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
+    }
 
     public override void _PhysicsProcess(double delta)
     {
@@ -31,27 +31,29 @@ public partial class Player : CharacterBody2D
         Velocity = velocity;
         MoveAndSlide();
 
-        // Play animation based on movement
+        // Play animation based on movement direction
         if (velocity.Length() > 0)
         {
-            _anim.Play("side_walk");
-        }
-        if (velocity.X < 0)
-        {
-            _anim.Play("front_walk");
-        }
-        else if (velocity.X > 0)
+            if (Mathf.Abs(velocity.X) > Mathf.Abs(velocity.Y))
             {
-            _anim.Play("back_walk");
+                _anim.Play("side_walk");
+                _anim.FlipH = velocity.X < 0;
             }
-    
+            else if (velocity.Y < 0)
+            {
+                _anim.Play("front_walk");
+                _anim.FlipH = false;
+            }
+            else if (velocity.Y > 0)
+            {
+                _anim.Play("backwards_walk");
+                _anim.FlipH = false;
+            }
+        }
         else
         {
             _anim.Play("idle");
+            _anim.FlipH = false;
         }
-		 if (velocity.X != 0)
-		{
-			_anim.FlipH = velocity.X < 0;
-		}
-	}
+    }
 }
