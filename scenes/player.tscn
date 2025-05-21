@@ -1,7 +1,7 @@
 [gd_scene load_steps=56 format=3 uid="uid://hsfb7syqt4ec"]
 
 [ext_resource type="Script" uid="uid://2yb6tqmf8ieq" path="res://scripts/Player.cs" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://b0u8quemoampy" path="res://pictures/cs stuff/borrowed textures/sprites/characters/player.png" id="2_qhqgy"]
+[ext_resource type="Texture2D" uid="uid://b0u8quemoampy" path="res://pictures/borrowed textures/sprites/characters/player.png" id="2_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(48, 64)
@@ -420,12 +420,12 @@ animations = [{
 script = ExtResource("1_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -48)
+position = Vector2(8, 112)
 shape = SubResource("RectangleShape2D_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(0, -72)
+position = Vector2(8, 88)
 scale = Vector2(3.16667, 2.83333)
 sprite_frames = SubResource("SpriteFrames_apa73")
 animation = &"idle"
-frame_progress = 0.591764
+frame_progress = 0.89338
