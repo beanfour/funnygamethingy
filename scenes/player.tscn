@@ -423,4 +423,4 @@ position = Vector2(-52, -52)
 scale = Vector2(3.16667, 2.83333)
 sprite_frames = SubResource("SpriteFrames_apa73")
 animation = &"basic_attack_front"
-frame_progress = 0.562017
+frame_progress = 0.495308
