@@ -422,4 +422,4 @@ script = ExtResource("1_g2els")
 position = Vector2(0, -8)
 sprite_frames = SubResource("SpriteFrames_apa73")
 animation = &"side_walk"
-frame_progress = 0.516111
+frame_progress = 0.766447
