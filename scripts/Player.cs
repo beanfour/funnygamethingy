@@ -13,33 +13,42 @@ public partial class Player : CharacterBody2D
 		_anim = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 	}
 
-	public override void _PhysicsProcess(double delta)
-	{
-		Vector2 velocity = Vector2.Zero;
+    public override void _PhysicsProcess(double delta)
+    {
+        Vector2 velocity = Vector2.Zero;
 
-		if (Input.IsActionPressed("ui_right"))
-			velocity.X += 1;
-		if (Input.IsActionPressed("ui_left"))
-			velocity.X -= 1;
-		if (Input.IsActionPressed("ui_down"))
-			velocity.Y += 1;
-		if (Input.IsActionPressed("ui_up"))
-			velocity.Y -= 1;
+        if (Input.IsActionPressed("ui_right"))
+            velocity.X += 1;
+        if (Input.IsActionPressed("ui_left"))
+            velocity.X -= 1;
+        if (Input.IsActionPressed("ui_down"))
+            velocity.Y += 1;
+        if (Input.IsActionPressed("ui_up"))
+            velocity.Y -= 1;
 
-		// Normalize for diagonal movement
-		velocity = velocity.Normalized() * Speed;
-		Velocity = velocity;
-		MoveAndSlide();
+        // Normalize for diagonal movement
+        velocity = velocity.Normalized() * Speed;
+        Velocity = velocity;
+        MoveAndSlide();
 
-		// Play animation based on movement
-		if (velocity.Length() > 0)
-		{
-			_anim.Play("side_walk");
-		}
-		else
-		{
-			_anim.Play("idle");
-		}
+        // Play animation based on movement
+        if (velocity.Length() > 0)
+        {
+            _anim.Play("side_walk");
+        }
+        if (velocity.X < 0)
+        {
+            _anim.Play("front_walk");
+        }
+        else if (velocity.X > 0)
+            {
+            _anim.Play("back_walk");
+            }
+    
+        else
+        {
+            _anim.Play("idle");
+        }
 		 if (velocity.X != 0)
 		{
 			_anim.FlipH = velocity.X < 0;
