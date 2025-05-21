@@ -42,7 +42,7 @@ public partial class Player : CharacterBody2D
 			else if (velocity.Y < 0)
 			{
 				_anim.Play("backwards_walk");
-				_anim.FlipH = false
+				_anim.FlipH = false;
 			}
 			else if (velocity.Y > 0)
 			{
