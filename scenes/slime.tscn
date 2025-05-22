@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://dqy5dghvtwmfo"]
+[gd_scene load_steps=26 format=3 uid="uid://dqy5dghvtwmfo"]
 
 [ext_resource type="Texture2D" uid="uid://cl025x32nj0l4" path="res://pictures/borrowed textures/sprites/characters/slime.png" id="1_371uh"]
 
@@ -169,12 +169,17 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_371uh"]
+radius = 16.0
+
 [node name="slime" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(32, 24)
 sprite_frames = SubResource("SpriteFrames_1kmbt")
 animation = &"slam_attack"
-frame_progress = 0.913299
+frame_progress = 0.539106
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(32, 24)
+shape = SubResource("CircleShape2D_371uh")
