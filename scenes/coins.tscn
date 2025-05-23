@@ -1,0 +1,40 @@
+[gd_scene load_steps=8 format=3 uid="uid://cs4i2ch4xr3pr"]
+
+[ext_resource type="Script" uid="uid://8r3s170tple7" path="res://scripts/Coins.cs" id="1_hhy8l"]
+[ext_resource type="Texture2D" uid="uid://dw53d3fgbhu06" path="res://pictures/coins/monedaNo1_00.png" id="1_s1asw"]
+[ext_resource type="Texture2D" uid="uid://b81owe27ue0vb" path="res://pictures/coins/monedaNo1_01.png" id="2_hhy8l"]
+[ext_resource type="Texture2D" uid="uid://d1ntasr74mymt" path="res://pictures/coins/monedaNo1_02.png" id="3_6p0jd"]
+[ext_resource type="Texture2D" uid="uid://cx5a4ph1wshgo" path="res://pictures/coins/monedaNo1_03.png" id="4_c07ru"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6p0jd"]
+size = Vector2(32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u3akd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_s1asw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hhy8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6p0jd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_c07ru")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="coins" type="CharacterBody2D"]
+script = ExtResource("1_hhy8l")
+
+[node name="hit_box" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6p0jd")
+
+[node name="coin_animation" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_u3akd")
+frame_progress = 0.336028
