@@ -429,5 +429,4 @@ frame_progress = 0.51082
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
-scale = Vector2(1, 1)
 shape = SubResource("CircleShape2D_g2els")
