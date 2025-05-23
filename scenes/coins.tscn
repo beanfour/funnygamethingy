@@ -31,8 +31,6 @@ animations = [{
 
 [node name="coins" type="CharacterBody2D"]
 script = ExtResource("1_hhy8l")
-AttractSpeed = null
-AttractRadius = null
 
 [node name="hit_box" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_6p0jd")
