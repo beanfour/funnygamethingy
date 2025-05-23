@@ -1,6 +1,7 @@
-[gd_scene load_steps=25 format=3 uid="uid://dqy5dghvtwmfo"]
+[gd_scene load_steps=24 format=3 uid="uid://dqy5dghvtwmfo"]
 
 [ext_resource type="Texture2D" uid="uid://cl025x32nj0l4" path="res://pictures/borrowed textures/sprites/characters/slime.png" id="1_371uh"]
+[ext_resource type="Script" uid="uid://ckuaccxi6f2o" path="res://scripts/Slime.cs" id="1_p2gj0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2gj0"]
 atlas = ExtResource("1_371uh")
@@ -25,18 +26,6 @@ region = Rect2(0, 192, 32, 32)
 [sub_resource type="AtlasTexture" id="AtlasTexture_gstla"]
 atlas = ExtResource("1_371uh")
 region = Rect2(32, 192, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_v5wyi"]
-atlas = ExtResource("1_371uh")
-region = Rect2(64, 192, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0l8pv"]
-atlas = ExtResource("1_371uh")
-region = Rect2(96, 192, 32, 32)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_vnioy"]
-atlas = ExtResource("1_371uh")
-region = Rect2(128, 192, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2xjuo"]
 atlas = ExtResource("1_371uh")
@@ -112,15 +101,6 @@ animations = [{
 "texture": SubResource("AtlasTexture_gstla")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v5wyi")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0l8pv")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_vnioy")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_2xjuo")
 }, {
 "duration": 1.0,
@@ -169,12 +149,22 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p2gj0"]
+radius = 10.4167
+height = 58.3333
+
 [node name="slime" type="CharacterBody2D"]
+script = ExtResource("1_p2gj0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(32, 24)
+position = Vector2(-8, -12)
+scale = Vector2(1.26007, 1.25)
 sprite_frames = SubResource("SpriteFrames_1kmbt")
-animation = &"slam_attack"
-frame_progress = 0.913299
+animation = &"idle"
+frame_progress = 0.702297
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
+position = Vector2(-8, -9)
+scale = Vector2(0.96, 0.24)
+shape = SubResource("CapsuleShape2D_p2gj0")

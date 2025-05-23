@@ -17,6 +17,10 @@ config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 <<<<<<<HEADrun/main_scene="res://battle.tscn"
 
+[display]
+
+window/size/viewport_height=642
+
 [dotnet]
 
 project/assembly_name="gamefiles"
