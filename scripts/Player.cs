@@ -50,10 +50,6 @@ public partial class Player : CharacterBody2D
 				_anim.FlipH = false;
 			}
 		}
-		else
-		{
-			_anim.Play("idle");
-			_anim.FlipH = false;
-		}
+		
 	}
 }

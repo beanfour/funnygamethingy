@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://k24rbfpn836a"]
+[gd_scene load_steps=6 format=3 uid="uid://k24rbfpn836a"]
 
 [ext_resource type="Texture2D" uid="uid://bfnisywnuw4vl" path="res://images.jpg" id="1_7sfm4"]
-[ext_resource type="Texture2D" uid="uid://biq2hcl0y3hqr" path="res://pictures/cs stuff/the sun.png" id="2_7sfm4"]
 [ext_resource type="FontFile" uid="uid://bmp0fllsbonj5" path="res://NESCyrillic.ttf" id="2_i431l"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i431l"]
@@ -119,7 +118,7 @@ size_flags_vertical = 1
 theme_override_styles/background = SubResource("StyleBoxFlat_oxp8w")
 theme_override_styles/fill = SubResource("StyleBoxFlat_7sfm4")
 step = 1.0
-value = 45.64
+value = 46.0
 show_percentage = false
 
 [node name="Healthbartext" type="Label" parent="Enemy Holder/Enemy Health"]
@@ -140,5 +139,4 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
-texture = ExtResource("2_7sfm4")
 stretch_mode = 3

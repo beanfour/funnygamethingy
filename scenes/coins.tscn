@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cx5a4ph1wshgo" path="res://pictures/coins/monedaNo1_03.png" id="4_c07ru"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6p0jd"]
-size = Vector2(32, 32)
+size = Vector2(16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_u3akd"]
 animations = [{
@@ -36,5 +36,6 @@ script = ExtResource("1_hhy8l")
 shape = SubResource("RectangleShape2D_6p0jd")
 
 [node name="coin_animation" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_u3akd")
-frame_progress = 0.336028
+frame_progress = 0.0960444
