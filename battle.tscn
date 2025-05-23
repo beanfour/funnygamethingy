@@ -1,22 +1,27 @@
 [gd_scene load_steps=6 format=3 uid="uid://k24rbfpn836a"]
 
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://bfnisywnuw4vl" path="res://images.jpg" id="1_7sfm4"]
+=======
+[ext_resource type="Texture2D" uid="uid://cahfl4rplu8ha" path="res://ALYiiE.png" id="1_oxp8w"]
+>>>>>>> Stashed changes
 [ext_resource type="FontFile" uid="uid://bmp0fllsbonj5" path="res://NESCyrillic.ttf" id="2_i431l"]
+[ext_resource type="Texture2D" uid="uid://diu5xsqhb61oq" path="res://pictures/coins/monedaNo10_00.png" id="3_7sfm4"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i431l"]
 bg_color = Color(0, 0, 0, 0.517647)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oxp8w"]
 bg_color = Color(0.49641, 1.20327e-06, 2.40654e-07, 1)
-border_width_left = 1
-border_width_top = 1
-border_width_right = 1
-border_width_bottom = 1
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
 border_color = Color(0, 0, 0, 1)
-expand_margin_left = 1.0
-expand_margin_top = 1.0
-expand_margin_right = 1.0
-expand_margin_bottom = 1.0
+expand_margin_left = 4.0
+expand_margin_top = 4.0
+expand_margin_right = 4.0
+expand_margin_bottom = 4.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7sfm4"]
 bg_color = Color(1, 0, 0, 0.866667)
@@ -26,10 +31,6 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 21.0
-offset_top = -9.0
-offset_right = 21.0
-offset_bottom = -9.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -40,7 +41,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_7sfm4")
+texture = ExtResource("1_oxp8w")
 
 [node name="playerPanel" type="Panel" parent="."]
 layout_mode = 1
@@ -56,23 +57,25 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_i431l")
 
 [node name="PlayerData" type="HBoxContainer" parent="playerPanel"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 30.0
+offset_right = -30.0
 grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
 [node name="Label" type="Label" parent="playerPanel/PlayerData"]
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 6
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("2_i431l")
 theme_override_font_sizes/font_size = 32
 text = "Player"
 
 [node name="Player Health" type="ProgressBar" parent="playerPanel/PlayerData"]
-custom_minimum_size = Vector2(100, 20)
+custom_minimum_size = Vector2(100, 30)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -84,14 +87,14 @@ show_percentage = false
 
 [node name="Healthbartext" type="Label" parent="playerPanel/PlayerData/Player Health"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("2_i431l")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 32
 text = "25/50"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -112,7 +115,7 @@ grow_vertical = 2
 alignment = 1
 
 [node name="Enemy Health" type="ProgressBar" parent="Enemy Holder"]
-custom_minimum_size = Vector2(0, 20)
+custom_minimum_size = Vector2(0, 30)
 layout_mode = 2
 size_flags_vertical = 1
 theme_override_styles/background = SubResource("StyleBoxFlat_oxp8w")
@@ -123,14 +126,15 @@ show_percentage = false
 
 [node name="Healthbartext" type="Label" parent="Enemy Holder/Enemy Health"]
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = -1
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -5.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 2
 theme_override_fonts/font = ExtResource("2_i431l")
-theme_override_font_sizes/font_size = 16
+theme_override_font_sizes/font_size = 32
 text = "25/50"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -139,4 +143,28 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+<<<<<<< Updated upstream
+=======
+texture = ExtResource("3_7sfm4")
+>>>>>>> Stashed changes
 stretch_mode = 3
+
+[node name="actionpanal" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 75.0
+grow_horizontal = 2
+scale = Vector2(0.9932, 1.00771)
+theme_override_styles/panel = SubResource("StyleBoxFlat_i431l")
+
+[node name="PlayerData" type="HBoxContainer" parent="actionpanal"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_right = -30.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
