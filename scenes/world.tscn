@@ -141,6 +141,7 @@ layer_2/tile_data = PackedInt32Array(851971, 0, 5, 1245194, 0, 5, 196625, 0, 5, 
 position = Vector2(808, 176)
 
 [node name="slime" parent="." instance=ExtResource("5_71j4m")]
+texture_filter = 1
 position = Vector2(584, 232)
 scale = Vector2(6.2, 6.2)
 
