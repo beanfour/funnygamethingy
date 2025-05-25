@@ -421,6 +421,7 @@ y_sort_enabled = true
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
 position = Vector2(0, -16)
 scale = Vector2(1.52083, 1.35417)
 sprite_frames = SubResource("SpriteFrames_apa73")
