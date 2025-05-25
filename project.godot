@@ -12,7 +12,7 @@ config_version=5
 
 config/name="gamefiles"
 config/description="cs"
-run/main_scene="res://battle.tscn"
+run/main_scene="uid://djaqursqd07ij"
 config/features=PackedStringArray("4.4", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 <<<<<<<HEADrun/main_scene="res://battle.tscn"

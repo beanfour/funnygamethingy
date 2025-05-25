@@ -425,7 +425,7 @@ texture_filter = 1
 position = Vector2(0, -16)
 scale = Vector2(1.52083, 1.35417)
 sprite_frames = SubResource("SpriteFrames_apa73")
-animation = &"back_idle"
+animation = &"side_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
