@@ -57,7 +57,7 @@ public partial class Player : CharacterBody2D
 		}
 		else
 {
-	_anim.Play("back_idle");
+	_anim.Play("idle");
 	_anim.FlipH = false;
 }
 //endregion
