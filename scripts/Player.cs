@@ -13,6 +13,8 @@ public partial class Player : CharacterBody2D
 		_anim = GetNode<AnimatedSprite2D>("AnimatedSprite2D");
 	}
 
+//region movement
+
 	public override void _PhysicsProcess(double delta)
 	{
 		Vector2 velocity = Vector2.Zero;
@@ -30,6 +32,9 @@ public partial class Player : CharacterBody2D
 		velocity = velocity.Normalized() * Speed;
 		Velocity = velocity;
 		MoveAndSlide();
+//endregion
+
+//region animations
 
 		// Play animation based on movement direction
 		if (velocity.Length() > 0)
@@ -52,9 +57,11 @@ public partial class Player : CharacterBody2D
 		}
 		else
 {
-    _anim.Play("idle");
-    _anim.FlipH = false;
+	_anim.Play("back_idle");
+	_anim.FlipH = false;
 }
-		
+//endregion
+//battle section
+
 	}
 }

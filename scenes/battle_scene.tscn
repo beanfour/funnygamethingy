@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://dyaesr5mxqg4g"]
+[gd_scene load_steps=4 format=3 uid="uid://dyaesr5mxqg4g"]
+
+[ext_resource type="Texture2D" uid="uid://c3cqx1hxvd1f0" path="res://pictures/MDPokemonBattle_Notextbox.png" id="1_kinr6"]
+[ext_resource type="PackedScene" uid="uid://dqy5dghvtwmfo" path="res://scenes/slime.tscn" id="2_8qdv8"]
+[ext_resource type="PackedScene" uid="uid://hsfb7syqt4ec" path="res://scenes/player.tscn" id="2_rca61"]
 
 [node name="battleScene" type="Node2D"]
+
+[node name="MdPokemonBattleNotextbox" type="Sprite2D" parent="."]
+position = Vector2(576, 328)
+scale = Vector2(0.144, 0.142222)
+texture = ExtResource("1_kinr6")
+
+[node name="slime" parent="MdPokemonBattleNotextbox" instance=ExtResource("2_8qdv8")]
+position = Vector2(3444.44, 956.25)
+scale = Vector2(156.455, 156.455)
+
+[node name="Player" parent="." instance=ExtResource("2_rca61")]
+position = Vector2(256, 504)
+scale = Vector2(6.98873, 6.98873)
