@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://xalpxpolpc0y"]
 
-[ext_resource type="FontFile" uid="uid://cutkjalb5x8hs" path="res://pictures/pokemon-dp-pro.otf" id="1_62e2m"]
-[ext_resource type="Script" uid="uid://cex2acohsvlmf" path="res://scripts/RespawnButton.cs" id="2_qtu10"]
+[ext_resource type="FontFile" uid="uid://cutkjalb5x8hs" path="res://pictures/pokemon-dp-pro.otf" id="1_5034k"]
+[ext_resource type="Script" uid="uid://cex2acohsvlmf" path="res://scripts/RespawnButton.cs" id="2_0r1s6"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ee4bf"]
 bg_color = Color(0.87451, 0.87451, 0.87451, 1)
@@ -54,7 +54,7 @@ offset_bottom = -191.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.73383, 1.41926)
-theme_override_fonts/font = ExtResource("1_62e2m")
+theme_override_fonts/font = ExtResource("1_5034k")
 theme_override_font_sizes/font_size = 241
 text = "You Died!"
 horizontal_alignment = 1
@@ -75,10 +75,10 @@ grow_vertical = 2
 theme_override_colors/font_hover_color = Color(0.282353, 0.25098, 0.313726, 1)
 theme_override_colors/font_color = Color(0.87451, 0.87451, 0.87451, 1)
 theme_override_colors/font_pressed_color = Color(0.87451, 0.87451, 0.87451, 1)
-theme_override_fonts/font = ExtResource("1_62e2m")
+theme_override_fonts/font = ExtResource("1_5034k")
 theme_override_font_sizes/font_size = 108
 theme_override_styles/hover = SubResource("StyleBoxFlat_ee4bf")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_kbped")
 theme_override_styles/normal = SubResource("StyleBoxFlat_fj5cn")
 text = "Respawn?"
-script = ExtResource("2_qtu10")
+script = ExtResource("2_0r1s6")

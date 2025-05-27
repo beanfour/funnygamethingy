@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dyaesr5mxqg4g"]
+[gd_scene load_steps=18 format=3 uid="uid://dyaesr5mxqg4g"]
 
 [ext_resource type="Texture2D" uid="uid://c3cqx1hxvd1f0" path="res://pictures/MDPokemonBattle_Notextbox.png" id="1_kinr6"]
 [ext_resource type="PackedScene" uid="uid://dqy5dghvtwmfo" path="res://scenes/slime.tscn" id="2_8qdv8"]
@@ -6,6 +6,9 @@
 [ext_resource type="Script" uid="uid://cig6hmj7v73x8" path="res://scripts/battlemoment.cs" id="4_8qdv8"]
 [ext_resource type="FontFile" uid="uid://cutkjalb5x8hs" path="res://pictures/pokemon-dp-pro.otf" id="5_pxwbd"]
 [ext_resource type="Script" uid="uid://buhnrx7o3yp63" path="res://scripts/AttackButton.cs" id="6_1i8jf"]
+[ext_resource type="Script" uid="uid://f0np0qovr2sd" path="res://scripts/FleeButton.cs" id="6_3oc74"]
+[ext_resource type="Script" uid="uid://cye8rpmndu8i6" path="res://scripts/PlayerHealth.cs" id="7_rum4d"]
+[ext_resource type="Script" uid="uid://bp0deb8vsfxga" path="res://scripts/EnemyHealth.cs" id="8_3oc74"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1i8jf"]
 bg_color = Color(0.972549, 0.976471, 0.85098, 1)
@@ -132,6 +135,7 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_svpld")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_pxwbd")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rum4d")
 text = "Flee"
+script = ExtResource("6_3oc74")
 
 [node name="Attack Button" type="Button" parent="Control/PlayerPanel"]
 layout_mode = 0
@@ -170,7 +174,7 @@ theme_override_fonts/font = ExtResource("5_pxwbd")
 theme_override_font_sizes/font_size = 48
 text = "HP:"
 
-[node name="ProgressBar" type="ProgressBar" parent="Control/PlayerPanel/PlayerHealth"]
+[node name="PlayerHealth" type="ProgressBar" parent="Control/PlayerPanel/PlayerHealth"]
 layout_mode = 0
 offset_left = 96.0
 offset_top = 16.0
@@ -178,8 +182,10 @@ offset_right = 488.0
 offset_bottom = 40.0
 theme_override_styles/background = SubResource("StyleBoxFlat_g72on")
 theme_override_styles/fill = SubResource("StyleBoxFlat_tttxe")
-value = 25.79
+step = 1.0
+value = 93.0
 show_percentage = false
+script = ExtResource("7_rum4d")
 
 [node name="EnemyPanel" type="Panel" parent="Control"]
 layout_mode = 1
@@ -196,7 +202,7 @@ grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1i8jf")
 
-[node name="PlayerHealth" type="Panel" parent="Control/EnemyPanel"]
+[node name="EnemyHealth" type="Panel" parent="Control/EnemyPanel"]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 24.0
@@ -204,7 +210,7 @@ offset_right = 544.0
 offset_bottom = 80.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0gp0h")
 
-[node name="Label" type="Label" parent="Control/EnemyPanel/PlayerHealth"]
+[node name="Label" type="Label" parent="Control/EnemyPanel/EnemyHealth"]
 layout_mode = 0
 offset_left = 24.0
 offset_right = 80.0
@@ -216,7 +222,7 @@ theme_override_fonts/font = ExtResource("5_pxwbd")
 theme_override_font_sizes/font_size = 48
 text = "HP:"
 
-[node name="ProgressBar" type="ProgressBar" parent="Control/EnemyPanel/PlayerHealth"]
+[node name="EnemyHealth" type="ProgressBar" parent="Control/EnemyPanel/EnemyHealth"]
 layout_mode = 0
 offset_left = 96.0
 offset_top = 16.0
@@ -226,3 +232,4 @@ theme_override_styles/background = SubResource("StyleBoxFlat_g72on")
 theme_override_styles/fill = SubResource("StyleBoxFlat_tttxe")
 value = 25.79
 show_percentage = false
+script = ExtResource("8_3oc74")
