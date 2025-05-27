@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://hsfb7syqt4ec" path="res://scenes/player.tscn" id="2_rca61"]
 [ext_resource type="Script" uid="uid://cig6hmj7v73x8" path="res://scripts/battlemoment.cs" id="4_8qdv8"]
 [ext_resource type="FontFile" uid="uid://cutkjalb5x8hs" path="res://pictures/pokemon-dp-pro.otf" id="5_pxwbd"]
-[ext_resource type="Script" uid="uid://csk85l1ea3a64" path="res://scripts/AttackButton.cs" id="6_1i8jf"]
+[ext_resource type="Script" uid="uid://buhnrx7o3yp63" path="res://scripts/AttackButton.cs" id="6_1i8jf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1i8jf"]
 bg_color = Color(0.972549, 0.976471, 0.85098, 1)
