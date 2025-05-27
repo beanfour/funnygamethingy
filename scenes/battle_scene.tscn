@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://dyaesr5mxqg4g"]
+[gd_scene load_steps=15 format=3 uid="uid://dyaesr5mxqg4g"]
 
 [ext_resource type="Texture2D" uid="uid://c3cqx1hxvd1f0" path="res://pictures/MDPokemonBattle_Notextbox.png" id="1_kinr6"]
 [ext_resource type="PackedScene" uid="uid://dqy5dghvtwmfo" path="res://scenes/slime.tscn" id="2_8qdv8"]
@@ -47,6 +47,37 @@ bg_color = Color(0.282353, 0.25098, 0.313726, 1)
 corner_radius_top_left = 40
 corner_radius_bottom_right = 40
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gp0h"]
+bg_color = Color(0.282353, 0.25098, 0.313726, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g72on"]
+bg_color = Color(0.972549, 0.976471, 0.858824, 1)
+border_width_left = 8
+border_width_top = 8
+border_width_right = 8
+border_width_bottom = 8
+border_color = Color(0.972549, 0.976471, 0.858824, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tttxe"]
+bg_color = Color(0.552941, 0.803922, 0.6, 1)
+border_color = Color(0.972549, 0.976471, 0.858824, 1)
+corner_radius_top_left = 40
+corner_radius_top_right = 40
+corner_radius_bottom_right = 40
+corner_radius_bottom_left = 40
+
 [node name="battleScene" type="Node2D"]
 
 [node name="background" type="Sprite2D" parent="."]
@@ -70,24 +101,23 @@ anchors_preset = 0
 offset_left = 1.0
 offset_right = 1152.0
 offset_bottom = 648.0
-grow_horizontal = 2
 
-[node name="ActionPanel" type="Panel" parent="Control"]
+[node name="PlayerPanel" type="Panel" parent="Control"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -608.0
-offset_top = -176.0
-offset_right = -32.0
-offset_bottom = -32.0
+offset_left = -1120.0
+offset_top = -616.0
+offset_right = -544.0
+offset_bottom = -400.0
 grow_horizontal = 0
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_1i8jf")
 
-[node name="FleeButton" type="Button" parent="Control/ActionPanel"]
+[node name="FleeButton" type="Button" parent="Control/PlayerPanel"]
 layout_mode = 0
 offset_left = 304.0
 offset_top = 24.0
@@ -103,7 +133,7 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_pxwbd")
 theme_override_styles/normal = SubResource("StyleBoxFlat_rum4d")
 text = "Flee"
 
-[node name="Attack Button" type="Button" parent="Control/ActionPanel"]
+[node name="Attack Button" type="Button" parent="Control/PlayerPanel"]
 layout_mode = 0
 offset_left = 32.0
 offset_top = 24.0
@@ -119,3 +149,80 @@ theme_override_styles/pressed = SubResource("StyleBoxFlat_pxwbd")
 theme_override_styles/normal = SubResource("StyleBoxFlat_3oc74")
 text = "Attack"
 script = ExtResource("6_1i8jf")
+
+[node name="PlayerHealth" type="Panel" parent="Control/PlayerPanel"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 136.0
+offset_right = 544.0
+offset_bottom = 192.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0gp0h")
+
+[node name="Label" type="Label" parent="Control/PlayerPanel/PlayerHealth"]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 80.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.996078, 0.752941, 0.0588235, 1)
+theme_override_colors/font_outline_color = Color(0.788235, 0.556863, 0.0666667, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_pxwbd")
+theme_override_font_sizes/font_size = 48
+text = "HP:"
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/PlayerPanel/PlayerHealth"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 16.0
+offset_right = 488.0
+offset_bottom = 40.0
+theme_override_styles/background = SubResource("StyleBoxFlat_g72on")
+theme_override_styles/fill = SubResource("StyleBoxFlat_tttxe")
+value = 25.79
+show_percentage = false
+
+[node name="EnemyPanel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -600.0
+offset_top = -152.0
+offset_right = -24.0
+offset_bottom = -48.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_1i8jf")
+
+[node name="PlayerHealth" type="Panel" parent="Control/EnemyPanel"]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 544.0
+offset_bottom = 80.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_0gp0h")
+
+[node name="Label" type="Label" parent="Control/EnemyPanel/PlayerHealth"]
+layout_mode = 0
+offset_left = 24.0
+offset_right = 80.0
+offset_bottom = 56.0
+theme_override_colors/font_color = Color(0.996078, 0.752941, 0.0588235, 1)
+theme_override_colors/font_outline_color = Color(0.788235, 0.556863, 0.0666667, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("5_pxwbd")
+theme_override_font_sizes/font_size = 48
+text = "HP:"
+
+[node name="ProgressBar" type="ProgressBar" parent="Control/EnemyPanel/PlayerHealth"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 16.0
+offset_right = 488.0
+offset_bottom = 40.0
+theme_override_styles/background = SubResource("StyleBoxFlat_g72on")
+theme_override_styles/fill = SubResource("StyleBoxFlat_tttxe")
+value = 25.79
+show_percentage = false
