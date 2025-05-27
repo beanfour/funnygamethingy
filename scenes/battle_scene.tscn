@@ -7,16 +7,16 @@
 
 [node name="battleScene" type="Node2D"]
 
-[node name="MdPokemonBattleNotextbox" type="Sprite2D" parent="."]
-position = Vector2(576, 328)
-scale = Vector2(0.144, 0.142222)
+[node name="background" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.144, 0.144)
 texture = ExtResource("1_kinr6")
-
-[node name="slime" parent="MdPokemonBattleNotextbox" instance=ExtResource("2_8qdv8")]
-position = Vector2(3444.44, 956.25)
-scale = Vector2(156.455, 156.455)
 
 [node name="battlechar" parent="." instance=ExtResource("2_rca61")]
 position = Vector2(256, 528)
 scale = Vector2(6.98873, 6.98873)
 script = ExtResource("4_8qdv8")
+
+[node name="slime" parent="." instance=ExtResource("2_8qdv8")]
+position = Vector2(1072, 461.7)
+scale = Vector2(22.5295, 22.5295)
