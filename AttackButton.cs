@@ -12,19 +12,25 @@ public partial class AttackButton : Button
     {
         Pressed += OnButtonPressed;
 
-        // Get the player's AnimatedSprite2D node using the exported path
-        if (PlayerNodePath != null && !PlayerNodePath.IsEmpty)
+        if (!PlayerNodePath.IsEmpty)
         {
             var playerNode = GetNodeOrNull<Node2D>(PlayerNodePath);
             if (playerNode != null)
                 _playerAnim = playerNode.GetNodeOrNull<AnimatedSprite2D>("AnimatedSprite2D");
+            else
+                GD.PrintErr("Player node not found at path: ", PlayerNodePath);
+        }
+        else
+        {
+            GD.PrintErr("PlayerNodePath is empty!");
         }
     }
 
     private void OnButtonPressed()
     {
-        GD.Print("Attack button pressed");
         if (_playerAnim != null)
-            _playerAnim.Play("attack");
+            _playerAnim.Play("basic_attack_back");
+        else
+            GD.PrintErr("Player AnimatedSprite2D not found!");
     }
 }
